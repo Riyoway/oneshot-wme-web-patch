@@ -1,0 +1,147 @@
+{
+ "name": "oneshot-wme-web-patch - fixes for the OneShot: World Machine Edition web port",
+ "upstream": {
+  "commit": "2519d48e756f1dd73271897ecde81c44c6a8c2b8",
+  "subdir": "dist"
+ },
+ "steps": [
+  {
+   "op": "bytes",
+   "file": "_framework/OneshotWeb.rpf3oktgfj.dll",
+   "src": "b1d57dcd30c4484ff80603ce1c316e6d720fdff57865669ce73ce9f612e73b1b",
+   "dst": "d9c8449e3815cd9bc83f3d8881b00af54a9c60967028b711d5d8598bb9ab8ebd",
+   "edits": [
+    {
+     "offset": 23986,
+     "old": "16",
+     "new": "18"
+    },
+    {
+     "offset": 24040,
+     "old": "16",
+     "new": "18"
+    },
+    {
+     "offset": 24051,
+     "old": "097b14050004",
+     "new": "160000000000"
+    }
+   ]
+  },
+  {
+   "op": "rename",
+   "from": "_framework/OneshotWeb.rpf3oktgfj.dll",
+   "to": "_framework/OneshotWeb.d9c8449e38.dll"
+  },
+  {
+   "op": "bytes",
+   "file": "_framework/dotnet.js",
+   "src": "0dc9e4298f11df788688dd4f907925d77e9d3fd44fcd7836e8271f70a4dcc5ff",
+   "dst": "747bca06131fd0702d9fad69853af4e86980ad05b1c9ac308fcb3bc2ffe05826",
+   "edits": [
+    {
+     "offset": 41567,
+     "old": "727066336f6b7467666a",
+     "new": "64396338343439653338"
+    },
+    {
+     "offset": 41608,
+     "old": "736456397a54444553452f344267504f4844467562584950332f56345a576163357a7a7039684c6e4f7873",
+     "new": "326368456e6a67567a5a7649507a32496762414b39557163594a5a774b4c63523164685a69376d726a7230"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "file": "gamedata/manifest.txt",
+   "src": "72b760e2ef0e8bc7f6a8664a39da029eb924509248e351631ece657f9fdf0dcc",
+   "dst": "3d417a4336e946bb79fc15dcf556cc3d1d9b19c499479cd99d67003fd2e984bd",
+   "with": "files/gamedata/manifest.txt"
+  },
+  {
+   "op": "delete",
+   "files": [
+    "content/facepics/rue_ttt.xnb",
+    "content/facepics/silver_falling.xnb",
+    "content/glyphs/keys/key_pipe.xnb",
+    "content/item_icons/clover2.xnb",
+    "content/item_icons/item_blue_journal_active.xnb",
+    "content/item_icons/item_blue_journal_copy.xnb",
+    "content/item_icons/item_green_vial.xnb",
+    "content/item_icons/item_green_water.xnb",
+    "content/item_icons/item_red_vial_empty.xnb",
+    "content/item_icons/item_red_water_pill.xnb",
+    "content/item_icons/item_tut_clippers.xnb",
+    "content/item_icons/item_tut_clippers_rusty.xnb",
+    "content/item_icons/item_tut_oilcan.xnb",
+    "content/lightmaps/jars_old.xnb",
+    "content/lightmaps/jars_older.xnb",
+    "content/npc/door_light.xnb",
+    "content/npc/finale_screens.xnb",
+    "content/npc/green_npc_child1.xnb",
+    "content/npc/maize_oh.xnb",
+    "content/npc/red_npcs.xnb",
+    "content/npc/red_x1.xnb",
+    "content/npc/test order.xnb",
+    "content/npc/tower_scenery1.xnb",
+    "content/npc/tv_screen_overlay.xnb",
+    "content/pictures/cg_desktop_no_effects.xnb",
+    "content/pictures/cg_end_old.xnb",
+    "content/pictures/cg_niko_in_bed_zoom_old.xnb",
+    "content/pictures/es/instruction3.xnb",
+    "content/pictures/es/instruction4.xnb",
+    "content/pictures/fr/instruction3.xnb",
+    "content/pictures/fr/instruction4.xnb",
+    "content/pictures/instruction3.xnb",
+    "content/pictures/instruction4.xnb",
+    "content/pictures/it/instruction3.xnb",
+    "content/pictures/it/instruction4.xnb",
+    "content/pictures/ja/instruction3.xnb",
+    "content/pictures/ja/instruction4.xnb",
+    "content/pictures/ko/instruction3.xnb",
+    "content/pictures/ko/instruction4.xnb",
+    "content/pictures/lined_paper_green.xnb",
+    "content/pictures/logo1.xnb",
+    "content/pictures/logo2.xnb",
+    "content/pictures/logo3.xnb",
+    "content/pictures/logo4.xnb",
+    "content/pictures/pj1.xnb",
+    "content/pictures/pt_br/instruction3.xnb",
+    "content/pictures/pt_br/instruction4.xnb",
+    "content/pictures/red area pan no niko.xnb",
+    "content/pictures/remember4.xnb",
+    "content/pictures/ru/instruction3.xnb",
+    "content/pictures/ru/instruction4.xnb",
+    "content/pictures/zh_cht/instruction3.xnb",
+    "content/pictures/zh_cht/instruction4.xnb",
+    "content/pictures/zh_cn/instruction3.xnb",
+    "content/pictures/zh_cn/instruction4.xnb",
+    "content/shaders/AdditiveShader.xnb",
+    "content/testBG.xnb",
+    "content/test_cursor.xnb",
+    "content/the_world_machine/fullscreen_border - Copy.xnb",
+    "content/the_world_machine/fullscreen_border-old.xnb",
+    "content/the_world_machine/fullscreen_border_color.xnb",
+    "content/the_world_machine/photos/niko_from_oneshot_free_online_dvdrip.xnb",
+    "content/the_world_machine/photos/on_sale.xnb",
+    "content/transitions/BayerDither4x4.xnb",
+    "content/ui/minimap/glen_239.xnb",
+    "content/ui/minimap/warp_icon.xnb",
+    "gamedata/music/30 Factory.ogg",
+    "gamedata/music/AviateOld.ogg",
+    "gamedata/music/Collapse_loop.ogg",
+    "gamedata/music/TheTower2.ogg",
+    "gamedata/music/ambience2.ogg",
+    "gamedata/music/ambience3.ogg",
+    "gamedata/music/mines maybe.ogg",
+    "gamedata/music_effects/item_get_cut_off.ogg",
+    "gamedata/sfx/robot_room.mp3",
+    "gamedata/sfx/square-death - Copy.wav",
+    "gamedata/sfx/step_tile_echo.wav",
+    "manifest.txt"
+   ],
+   "why": "never loaded by the game",
+   "remove_empty_dirs": []
+  }
+ ]
+}
